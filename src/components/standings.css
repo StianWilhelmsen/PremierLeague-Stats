@@ -1,0 +1,8 @@
+img {
+    width: 1rem;
+}
+
+.standings-line {
+    background-color: rgb(241, 241, 241);
+    border: 0.2px solid black;
+}
