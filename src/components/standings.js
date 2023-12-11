@@ -17,14 +17,36 @@ function LeagueTable() {
             }
         };
 
-        //fetchStanding();
+        fetchStanding();
     }, []);
 
     return (
         <div className="standing-container">
+            
+            <div className='info-grid'>
+                <div className='stats-title'>MP</div>
+                <div className='stats-title'>W</div>
+                <div className='stats-title'>D</div>
+                <div className='stats-title'>L</div>
+                <div className='stats-title'>GD</div>
+                <div className='stats-title'>P</div>
+            </div>
             {standings.map((team, index) => (
                 <div className="standings-line" key={index}>
-                    {team.rank} - <img src={team.team.logo} alt={team.team.name + " logo"} /> - {team.team.name} - {team.points}
+                    <div className='left-aligned'>
+                        <div className='left-info'>{team.rank}</div>
+                        <div className='left-info'><img src={team.team.logo} alt={team.team.name + " logo"}/></div>
+                        <div className='left-info' id='team-name-div'>{team.team.name}</div>
+
+                    </div>
+                    <div className='right-aligned'>
+                        <div className='right-info'>{team.all.played}</div>
+                        <div className='right-info'>{team.all.win}</div>
+                        <div className='right-info'>{team.all.draw}</div>
+                        <div className='right-info'>{team.all.lose}</div>
+                        <div className='right-info'>{team.goalsDiff}</div>
+                        <div className='right-info'>{team.points}</div>
+                    </div>
                 </div>
             ))}
             </div>
