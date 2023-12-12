@@ -11,13 +11,12 @@ function LeagueTable() {
                 const response = await axios.request(options);
                 const standingsData = response.data.response[0].league.standings[0];
                 setStandings(standingsData);
-                console.log(response.data);
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchStanding();
+        //fetchStanding();
     }, []);
 
     return (
