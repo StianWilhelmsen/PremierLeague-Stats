@@ -1,0 +1,17 @@
+.fixture-line {
+    display: flex;
+    border: 1px solid rgb(53, 53, 53);
+    padding: 0.5rem 0.5rem;
+    width: 15rem;
+}
+
+.team-info {
+    width: 50%;
+}
+
+.time {
+    width: 50%;
+    display: flex;
+    align-items: center;     /* Vertically center the content */
+    justify-content: flex-end;
+}

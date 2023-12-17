@@ -15,8 +15,9 @@ img {
 }
 
 .standing-container {
+    border: 1px solid rgb(53, 53, 53);
+    border-radius: 5px;
     width: 35rem;
-    padding: 1rem;
 }
 
 .info-grid {
@@ -59,3 +60,4 @@ img {
     width: 140px;
     text-align: left;
 }
+
